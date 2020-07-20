@@ -414,7 +414,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="4" />
- <parameter name="projectName">altera_atlas_soc.qpf</parameter>
+ <parameter name="projectName">terasic_de10_nano_rev_b.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
