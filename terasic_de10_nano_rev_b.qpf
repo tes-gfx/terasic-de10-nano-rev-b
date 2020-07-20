@@ -1,0 +1,6 @@
+DATE = "10:09:18 July 07, 2016"
+QUARTUS_VERSION = "15.1.0"
+
+# Revisions
+
+PROJECT_REVISION = "terasic_de10_nano_rev_b"
