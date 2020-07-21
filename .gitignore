@@ -17,3 +17,4 @@ soc_system/
 *.rbf
 *.sld
 *.sof
+*.qws
