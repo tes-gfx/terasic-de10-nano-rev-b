@@ -48,17 +48,17 @@ set_output_delay  -clock [get_clocks {HDMI_I2C_SCL}] 10 [get_ports {HDMI_I2C_SDA
 #**************************************************************
 # Set Clock Groups
 #**************************************************************
-set HDMI_CLK {u0|pll_pixel_clock|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk}
+set HDMI_CLK {u0|pll_pixel_clock|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
 set BUS_CLK {u0|pll_stream|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
 
-create_generated_clock -add -name {hdmi_tx_clk108} -source [get_pins ${HDMI_CLK}] [get_ports HDMI_TX_CLK]
+create_generated_clock -add -name {hdmi_tx_clk40} -source [get_pins ${HDMI_CLK}] [get_ports HDMI_TX_CLK]
 set_clock_groups -exclusive -group ${HDMI_CLK} -group ${BUS_CLK}
 
 
 #**************************************************************
 # HDMI settings
 #**************************************************************
-set HDMI_CLK_PERIOD [get_clock_info -period [get_clocks hdmi_tx_clk108]]
+set HDMI_CLK_PERIOD [get_clock_info -period [get_clocks hdmi_tx_clk40]]
 set HDMI_TSU 1.0
 set HDMI_TH  0.7
 set HDMI_PAD 0.3
@@ -68,17 +68,17 @@ set HDMI_MIN [expr ${HDMI_CLK_PERIOD} + ${HDMI_TH}  + ${HDMI_PAD}]
 post_message -type info [format "HDMI_MAX = %f" ${HDMI_MAX}]
 post_message -type info [format "HDMI_MIN = %f" ${HDMI_MIN}]
 
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -max ${HDMI_MAX} [get_ports {HDMI_TX_D[*]}]
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -min ${HDMI_MIN} [get_ports {HDMI_TX_D[*]}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -max ${HDMI_MAX} [get_ports {HDMI_TX_D[*]}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -min ${HDMI_MIN} [get_ports {HDMI_TX_D[*]}]
 
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -max ${HDMI_MAX} [get_ports {HDMI_TX_DE}]
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -min ${HDMI_MIN} [get_ports {HDMI_TX_DE}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -max ${HDMI_MAX} [get_ports {HDMI_TX_DE}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -min ${HDMI_MIN} [get_ports {HDMI_TX_DE}]
 
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -max ${HDMI_MAX} [get_ports {HDMI_TX_HS}]
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -min ${HDMI_MIN} [get_ports {HDMI_TX_HS}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -max ${HDMI_MAX} [get_ports {HDMI_TX_HS}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -min ${HDMI_MIN} [get_ports {HDMI_TX_HS}]
 
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -max ${HDMI_MAX} [get_ports {HDMI_TX_VS}]
-set_output_delay -clock [get_clocks hdmi_tx_clk108] -min ${HDMI_MIN} [get_ports {HDMI_TX_VS}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -max ${HDMI_MAX} [get_ports {HDMI_TX_VS}]
+set_output_delay -clock [get_clocks hdmi_tx_clk40] -min ${HDMI_MIN} [get_ports {HDMI_TX_VS}]
 
 
 #**************************************************************

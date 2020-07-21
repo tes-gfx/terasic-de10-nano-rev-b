@@ -13,7 +13,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "7";
          type = "int";
       }
    }
@@ -89,22 +89,6 @@
       {
          value = "4";
          type = "int";
-      }
-   }
-   element pll_reconfig_pixel_clock
-   {
-      datum _sortIndex
-      {
-         value = "5";
-         type = "int";
-      }
-   }
-   element pll_reconfig_pixel_clock.mgmt_avalon_slave
-   {
-      datum baseAddress
-      {
-         value = "25344";
-         type = "String";
       }
    }
    element pll_stream
@@ -335,7 +319,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -351,7 +335,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "6";
          type = "int";
       }
    }
@@ -388,7 +372,7 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "8";
          type = "int";
       }
    }
@@ -590,9 +574,9 @@
   <parameter name="ENABLE_USER_ECC" value="false" />
   <parameter name="EXPORT_AFI_HALF_CLK" value="false" />
   <parameter name="EXTRA_SETTINGS" value="" />
-  <parameter name="F2H_AXI_CLOCK_FREQ" value="75000000" />
-  <parameter name="F2H_SDRAM0_CLOCK_FREQ" value="75000000" />
-  <parameter name="F2H_SDRAM1_CLOCK_FREQ" value="75000000" />
+  <parameter name="F2H_AXI_CLOCK_FREQ" value="85000000" />
+  <parameter name="F2H_SDRAM0_CLOCK_FREQ" value="85000000" />
+  <parameter name="F2H_SDRAM1_CLOCK_FREQ" value="85000000" />
   <parameter name="F2H_SDRAM2_CLOCK_FREQ" value="100" />
   <parameter name="F2H_SDRAM3_CLOCK_FREQ" value="100" />
   <parameter name="F2H_SDRAM4_CLOCK_FREQ" value="100" />
@@ -604,7 +588,7 @@
   <parameter name="F2SCLK_SDRAMCLK_Enable" value="false" />
   <parameter name="F2SCLK_SDRAMCLK_FREQ" value="0" />
   <parameter name="F2SCLK_WARMRST_Enable" value="true" />
-  <parameter name="F2SDRAM_Type" value="AXI-3,AXI-3" />
+  <parameter name="F2SDRAM_Type">Avalon-MM Bidirectional,Avalon-MM Bidirectional</parameter>
   <parameter name="F2SDRAM_Width" value="128,128" />
   <parameter name="F2SINTERRUPT_Enable" value="true" />
   <parameter name="F2S_Width" value="3" />
@@ -648,7 +632,7 @@
   <parameter name="H2F_AXI_CLOCK_FREQ" value="100" />
   <parameter name="H2F_CTI_CLOCK_FREQ" value="100" />
   <parameter name="H2F_DEBUG_APB_CLOCK_FREQ" value="100" />
-  <parameter name="H2F_LW_AXI_CLOCK_FREQ" value="75000000" />
+  <parameter name="H2F_LW_AXI_CLOCK_FREQ" value="85000000" />
   <parameter name="H2F_TPIU_CLOCK_IN_FREQ" value="100" />
   <parameter name="HARD_EMIF" value="true" />
   <parameter name="HCX_COMPAT_MODE" value="false" />
@@ -1141,7 +1125,7 @@
   <parameter name="gui_en_adv_params" value="false" />
   <parameter name="gui_en_dps_ports" value="false" />
   <parameter name="gui_en_phout_ports" value="false" />
-  <parameter name="gui_en_reconf" value="true" />
+  <parameter name="gui_en_reconf" value="false" />
   <parameter name="gui_enable_cascade_in" value="false" />
   <parameter name="gui_enable_cascade_out" value="false" />
   <parameter name="gui_enable_mif_dps" value="false" />
@@ -1152,7 +1136,7 @@
   <parameter name="gui_multiply_factor" value="1" />
   <parameter name="gui_number_of_clocks" value="1" />
   <parameter name="gui_operation_mode" value="direct" />
-  <parameter name="gui_output_clock_frequency0" value="108.0" />
+  <parameter name="gui_output_clock_frequency0" value="40.0" />
   <parameter name="gui_output_clock_frequency1" value="100.0" />
   <parameter name="gui_output_clock_frequency10" value="100.0" />
   <parameter name="gui_output_clock_frequency11" value="100.0" />
@@ -1235,16 +1219,6 @@
   <parameter name="gui_switchover_delay" value="0" />
   <parameter name="gui_switchover_mode">Automatic Switchover</parameter>
   <parameter name="gui_use_locked" value="true" />
- </module>
- <module
-   name="pll_reconfig_pixel_clock"
-   kind="altera_pll_reconfig"
-   version="19.1"
-   enabled="1">
-  <parameter name="ENABLE_BYTEENABLE" value="false" />
-  <parameter name="ENABLE_MIF" value="false" />
-  <parameter name="MIF_FILE_NAME" value="" />
-  <parameter name="device_family" value="Cyclone V" />
  </module>
  <module name="pll_stream" kind="altera_pll" version="19.1" enabled="1">
   <parameter name="debug_print_output" value="false" />
@@ -1365,8 +1339,8 @@
   <parameter name="gui_multiply_factor" value="1" />
   <parameter name="gui_number_of_clocks" value="1" />
   <parameter name="gui_operation_mode" value="direct" />
-  <parameter name="gui_output_clock_frequency0" value="75.0" />
-  <parameter name="gui_output_clock_frequency1" value="75.0" />
+  <parameter name="gui_output_clock_frequency0" value="85.0" />
+  <parameter name="gui_output_clock_frequency1" value="108.0" />
   <parameter name="gui_output_clock_frequency10" value="100.0" />
   <parameter name="gui_output_clock_frequency11" value="100.0" />
   <parameter name="gui_output_clock_frequency12" value="100.0" />
@@ -1492,7 +1466,7 @@
   <parameter name="C_LAYER_ADDRESS_ALIGN_BITS" value="0" />
   <parameter name="C_LAYER_COUNT" value="2" />
   <parameter name="C_LINE_IRQ_POS_PROG" value="true" />
-  <parameter name="C_MASTER_INTERFACE_TYPE" value="1" />
+  <parameter name="C_MASTER_INTERFACE_TYPE" value="0" />
   <parameter name="C_MAX_OUTSTANDING_READS" value="2" />
   <parameter name="C_OUTPUT_YCBCR_ENA" value="false" />
   <parameter name="C_PIXEL_CLK_POL" value="0" />
@@ -1987,7 +1961,7 @@
   <parameter name="h_pos_stop_cust_7" value="0" />
   <parameter name="h_pos_stop_cust_8" value="0" />
   <parameter name="h_pos_stop_cust_9" value="0" />
-  <parameter name="pixel_clock_freq" value="108000000" />
+  <parameter name="pixel_clock_freq" value="40000000" />
   <parameter name="pixel_format_cust_1" value="0" />
   <parameter name="pixel_format_cust_10" value="0" />
   <parameter name="pixel_format_cust_2" value="0" />
@@ -2137,7 +2111,7 @@
   <parameter name="LIMITER_FRAC_WIDTH" value="18" />
   <parameter name="LIMITER_INT_WIDTH" value="14" />
   <parameter name="MBI_BURSTCOUNT_WIDTH" value="4" />
-  <parameter name="MBI_BYTE_SEL_WIDTH" value="3" />
+  <parameter name="MBI_BYTE_SEL_WIDTH" value="4" />
   <parameter name="MBI_MAX_BURST_LENGTH" value="0" />
   <parameter name="MBI_NUM_BYTES" value="0" />
   <parameter name="MBI_OUTSTANDING_READ_COUNT_WIDTH" value="3" />
@@ -2164,8 +2138,8 @@
    kind="avalon"
    version="19.1"
    start="DAVE2D_0.Master"
-   end="hps_0.f2h_sdram1_data">
-  <parameter name="arbitrationPriority" value="1" />
+   end="hps_0.f2h_sdram0_data">
+  <parameter name="arbitrationPriority" value="8" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
@@ -2173,8 +2147,8 @@
    kind="avalon"
    version="19.1"
    start="tes_davehd_0.avalon_master"
-   end="hps_0.f2h_sdram1_data">
-  <parameter name="arbitrationPriority" value="1" />
+   end="hps_0.f2h_sdram0_data">
+  <parameter name="arbitrationPriority" value="8" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
@@ -2182,8 +2156,8 @@
    kind="avalon"
    version="19.1"
    start="tes_warping_engine_0.avalon_master"
-   end="hps_0.f2h_sdram1_data">
-  <parameter name="arbitrationPriority" value="1" />
+   end="hps_0.f2h_sdram0_data">
+  <parameter name="arbitrationPriority" value="8" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
@@ -2218,15 +2192,6 @@
    kind="avalon"
    version="19.1"
    start="hps_0.h2f_lw_axi_master"
-   end="pll_reconfig_pixel_clock.mgmt_avalon_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x6300" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="19.1"
-   start="hps_0.h2f_lw_axi_master"
    end="tes_cdc_0.slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x4000" />
@@ -2237,7 +2202,7 @@
    version="19.1"
    start="tes_cdc_0.master"
    end="hps_0.f2h_sdram0_data">
-  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="arbitrationPriority" value="16" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
@@ -2291,11 +2256,6 @@
  <connection
    kind="clock"
    version="19.1"
-   start="pll_stream.outclk0"
-   end="pll_reconfig_pixel_clock.mgmt_clk" />
- <connection
-   kind="clock"
-   version="19.1"
    start="pll_pixel_clock.outclk0"
    end="tes_cdc_0.pixel_clk" />
  <connection
@@ -2303,28 +2263,6 @@
    version="19.1"
    start="pll_stream.outclk0"
    end="tes_cdc_0.sbus_clk" />
- <connection
-   kind="conduit"
-   version="19.1"
-   start="pll_reconfig_pixel_clock.reconfig_from_pll"
-   end="pll_pixel_clock.reconfig_from_pll">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="19.1"
-   start="pll_pixel_clock.reconfig_to_pll"
-   end="pll_reconfig_pixel_clock.reconfig_to_pll">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
  <connection
    kind="interrupt"
    version="19.1"
@@ -2375,11 +2313,6 @@
    version="19.1"
    start="clk_0.clk_reset"
    end="DAVE2D_0.clock_reset" />
- <connection
-   kind="reset"
-   version="19.1"
-   start="clk_0.clk_reset"
-   end="pll_reconfig_pixel_clock.mgmt_reset" />
  <connection
    kind="reset"
    version="19.1"
