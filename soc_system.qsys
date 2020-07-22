@@ -1136,7 +1136,7 @@
   <parameter name="gui_multiply_factor" value="1" />
   <parameter name="gui_number_of_clocks" value="1" />
   <parameter name="gui_operation_mode" value="direct" />
-  <parameter name="gui_output_clock_frequency0" value="40.0" />
+  <parameter name="gui_output_clock_frequency0" value="65.0" />
   <parameter name="gui_output_clock_frequency1" value="100.0" />
   <parameter name="gui_output_clock_frequency10" value="100.0" />
   <parameter name="gui_output_clock_frequency11" value="100.0" />
@@ -1425,14 +1425,14 @@
  </module>
  <module name="tes_cdc_0" kind="tes_cdc" version="3.0" enabled="1">
   <parameter name="BG_BLUE" value="0" />
-  <parameter name="BG_GREEN" value="255" />
+  <parameter name="BG_GREEN" value="0" />
   <parameter name="BG_RED" value="0" />
   <parameter name="BLUE_WIDTH" value="8" />
   <parameter name="C_AUX_FB_FIFO_ADDRESS_WIDTH" value="9" />
   <parameter name="C_AXI_ID_ENA" value="true" />
   <parameter name="C_BACKGROUND_BLENDING_ENA" value="false" />
   <parameter name="C_BACKGROUND_LAYER_ENA" value="false" />
-  <parameter name="C_BG_COLOR_PROG" value="false" />
+  <parameter name="C_BG_COLOR_PROG" value="true" />
   <parameter name="C_BG_RAM_ADDRESS_WIDTH" value="9" />
   <parameter name="C_BG_RAM_ADDR_CALC_FRAC_WIDTH" value="4" />
   <parameter name="C_BG_RAM_ADDR_INCR_INT_WIDTH" value="6" />
@@ -1505,7 +1505,7 @@
   <parameter name="SELECTED_CONFIGURATION_7" value="Default" />
   <parameter name="SELECTED_CONFIGURATION_8" value="Default" />
   <parameter name="SELECTED_CONFIGURATION_9" value="Default" />
-  <parameter name="SELECTED_VIDEO_MODE" value="1280x1024@60Hz" />
+  <parameter name="SELECTED_VIDEO_MODE" value="1024x768@60Hz" />
   <parameter name="SHOW_TIMING_GRAPH" value="false" />
   <parameter name="V_ACTIVE_CUSTOM" value="480" />
   <parameter name="V_B_PORCH_CUSTOM" value="33" />
@@ -1961,7 +1961,7 @@
   <parameter name="h_pos_stop_cust_7" value="0" />
   <parameter name="h_pos_stop_cust_8" value="0" />
   <parameter name="h_pos_stop_cust_9" value="0" />
-  <parameter name="pixel_clock_freq" value="40000000" />
+  <parameter name="pixel_clock_freq" value="65000000" />
   <parameter name="pixel_format_cust_1" value="0" />
   <parameter name="pixel_format_cust_10" value="0" />
   <parameter name="pixel_format_cust_2" value="0" />
